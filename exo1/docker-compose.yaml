@@ -1,0 +1,6 @@
+version: '3.8'
+
+services:
+  hello-data:
+    build: .
+    container_name: exo1_container

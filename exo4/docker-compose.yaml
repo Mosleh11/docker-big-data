@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  spark-master:
+    image: bitnamilegacy/spark:3  
+    container_name: spark-master
+    environment:
+      - SPARK_MODE=master
+    ports:
+      - "8080:8080"
+      - "7077:7077"
+
+  spark-worker:
+    image: bitnamilegacy/spark:3  
+    container_name: spark-worker
+    environment:
+      - SPARK_MODE=worker
+      - SPARK_MASTER_URL=spark://spark-master:7077
+    depends_on:
+      - spark-master
+
+
+  spark-submit:
+    build: .
+    container_name: spark-submit
+    environment:
+      - SPARK_DRIVER_HOST=spark-submit
+    depends_on:
+      - spark-master
+      - spark-worker

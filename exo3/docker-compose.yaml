@@ -1,0 +1,6 @@
+version: '3.8'
+
+services:
+  spark-job:
+    build: .
+    container_name: exo3_spark
