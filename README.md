@@ -40,3 +40,6 @@ cd exoX  # (Remplacer X par 1, 2, 3 ou 4)
 make
 # ou manuellement :
 docker-compose up --build
+
+# Pour nettoyer les conteneurs :
+make clean
