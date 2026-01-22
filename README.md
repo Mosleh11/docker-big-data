@@ -1,7 +1,7 @@
 # Projet Big Data Docker
 
 **Auteur :** Mohammed MOSLEH
-
+**Date :** Janvier 2026
 
 ## Description
 Ce dépôt contient une progression complète vers la mise en place d'une architecture Big Data conteneurisée. Du simple script de Data Science à un Cluster Spark distribué.
@@ -15,7 +15,7 @@ Ce dépôt contient une progression complète vers la mise en place d'une archit
 * **Exo 2 : Environnement Data Science**
     * Déploiement de **Jupyter Lab** via Docker.
     * Persistance des notebooks via volumes.
-    * Accessible sur le port 8888.
+    * Accessible sur le port `8888`.
 
 * **Exo 3 : Spark Local**
     * Introduction à **Apache Spark** (PySpark).
@@ -34,11 +34,9 @@ Ce dépôt contient une progression complète vers la mise en place d'une archit
 Chaque dossier contient un `Makefile` et un `docker-compose.yaml`.
 
 **Pour lancer un exercice :**
-cd exoX
+
+```bash
+cd exoX  # (Remplacer X par 1, 2, 3 ou 4)
 make
-# ou
+# ou manuellement :
 docker-compose up --build
-
-**Pour nettoyer :**
-make clean
-
